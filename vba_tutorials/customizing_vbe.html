@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8" />
+    <meta name="Keywords" content="visual basic for application tutorials, 
+    solidworks macro tutorials,SW macro tutorials, vba tutorial, cad macro tutorial, 
+    solidworks add-in tutorials" />
+    <meta name="Description" content="Well organized and easy to understand Macro/add-in 
+    tutorials for any Computer Aided Design (CAD) software, with examples show how to use 
+    Visual Basic for Application (VBA) and Macro development, how to create add-in using 
+    C# programming language." />
+    <title>Customizing Visual Basic Editor</title>
+    <link rel="stylesheet" href="../w3.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+    <link rel="icon" href="../images/logo-black.png">  
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- 
+        Scripts
+        1. This is script for showing menu bar in mobile.
+        2. This is a toggle button.
+        3. This is a script for opening and closing side bar
+    -->
+    <script>
+        // This is script 1 and 2
+        function openMenu(){
+            var x = document.getElementById("top_menu");
+            if (x.className.indexOf("w3-hide-small") == -1) {
+                x.className += "w3-hide-small";
+            } else {
+                x.className = x.className.replace("w3-hide-small", "");
+            }
+        }
+
+        // This is script 3
+        // Function for opeingin of side bar
+        function open_vba_sidebar(){
+            document.getElementById("vba_contentlist").style.width = "300px";
+        }
+        // Function for closing of side bar
+        function close_vba_sidebar(){
+            document.getElementById("vba_contentlist").style.width = "0";
+        }
+    </script>
+</head>
+<body>
+    <!-- This is our Heading -->
+    <div class="w3-container w3-cell-row w3-teal w3-mobile ">
+        <!-- This is Site name for large screen -->
+        <div class="w3-cell w3-mobile w3-hide-small"><h1>CADwCODE</h1></div>
+        <!-- This is Site name for small screen-->
+        <div class="w3-cell w3-mobile w3-hide-large w3-center"><h1>CADwCODE</h1></div>
+        <!-- This is Site description -->
+        <div class="w3-hide-small w3-cell w3-right w3-wide w3-mobile">LEARN CAD WITH CODE</div>        
+    </div>
+
+    <!-- Menu list -->
+    <div class="sticky">
+        <!-- This is menu list -->
+        <div class="w3-bar w3-large w3-dark-grey" style="font-family: 'Ubuntu', sans-serif">
+            <!-- This is menu icon comes in mobile -->
+            <i onclick="openMenu()" 
+                class=" w3-button w3-bar-item w3-right w3-hide-large w3-hover-black material-icons">home</i>
+            <!-- This is our container for menu list -->
+            <div id="top_menu" class="w3-hide-small">
+                <a href="../index.html" class="w3-bar-item w3-button w3-hover-black w3-mobile">Home</a>
+                <a href="vba_tutorial_main_page.html" class="w3-bar-item w3-button w3-rose w3-hover-black w3-mobile">VBA</a>
+                <a href="../solidworks_tutorials/solidworks_tutorial_main_page.html" class="w3-bar-item w3-button w3-hover-black w3-mobile">Solidworks</a>
+                <a href="../about_website.html" class="w3-bar-item w3-button w3-hover-black w3-mobile">About</a>
+                <a href="../about_privacy.html" class="w3-bar-item w3-button w3-hover-black w3-mobile">Privacy Policy</a>
+                <a href="../disclaimer.html" class="w3-bar-item w3-button w3-hover-black w3-mobile">Disclaimer</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Side bar for Visual Basic -->
+    <div class="sidenav w3-bar-block" style="font-family: 'Ubuntu', sans-serif" id="vba_contentlist">
+        <i onclick="close_vba_sidebar()" class=" w3-button w3-bar-item w3-right w3-hover-black material-icons">close</i>
+        <a href="vba_tutorial_main_page.html" class="w3-bar-item w3-button w3-block w3-mobile">Visual Basic Introduction</a>
+        <a href="visual_basic_editor.html" class="w3-bar-item w3-button w3-block w3-mobile">VISUAL BASIC EDITOR (VBE)</a>
+        <a href="working_with_project_window.html" class="w3-bar-item w3-button w3-block w3-mobile">Working with Project Window</a>
+        <a href="working_with_code_window.html" class="w3-bar-item w3-button w3-block w3-mobile">Working with Code Window</a>
+        <a href="customizing_vbe.html" class="w3-bar-item w3-button w3-block w3-rose w3-mobile">Customizing Visual Basic Editor</a>
+        <a href="sub_and_function_procedure.html" class="w3-bar-item w3-button w3-block w3-mobile">Sub and Function Procedures</a>
+        <a href="sub_versus_function_procedure.html" class="w3-bar-item w3-button w3-block w3-mobile">Sub versus Function Procedures</a>
+        <a href="executing_sub_procedure.html" class="w3-bar-item w3-button w3-block w3-mobile">Executing Sub procedure</a>
+        <a href="executing_function_procedure.html" class="w3-bar-item w3-button w3-block w3-mobile">Executing Function procedure</a>
+        <a href="programming_concepts.html" class="w3-bar-item w3-button w3-block w3-mobile">Programming Concepts</a>
+        <a href="comments_in_vba.html" class="w3-bar-item w3-button w3-block w3-mobile">Using Comments in Your VBA Code</a>
+        <a href="understanding_data_types.html" class="w3-bar-item w3-button w3-block w3-mobile">Understanding Data types</a>
+        <a href="understanding_variables.html" class="w3-bar-item w3-button w3-block w3-mobile">Understanding Variables</a>
+        <a href="declaring_and_scope_of_variables.html" class="w3-bar-item w3-button w3-block w3-mobile">Declaring and Scoping Variables</a>
+        <a href="procedure_only_variables.html" class="w3-bar-item w3-button w3-block w3-mobile">Procedure-only Variables</a>
+        <a href="module_only_variables.html" class="w3-bar-item w3-button w3-block w3-mobile">Module-only Variables</a>
+        <a href="public_static_and_life_of_variables.html" class="w3-bar-item w3-button w3-block w3-mobile">Public, Static and Life of Variables</a>
+        <a href="understanding_constants.html" class="w3-bar-item w3-button w3-block w3-mobile">Understanding Constants</a>
+        <a href="working_with_strings.html" class="w3-bar-item w3-button w3-block w3-mobile">Working with Strings</a>
+        <a href="assignment_statement.html" class="w3-bar-item w3-button w3-block w3-mobile">Assignment Statements</a>
+        <a href="operators.html" class="w3-bar-item w3-button w3-block w3-mobile">Operators</a>
+        <a href="working_with_arrays.html" class="w3-bar-item w3-button w3-block w3-mobile">Working with Arrays</a>
+    </div>
+
+    <!-- This is my webpage --> 
+    <div class="w3-container w3-cell-row">
+        
+        <!-- This is left side space -->
+        <div class="w3-container w3-cell w3-hide-small"></div>
+
+        <!-- This is where i put my content --> 
+        <div class="w3-container w3-cell">        
+            
+            <!-- This introduction to Visual Basic macro -->
+            <div class="w3-container">
+
+                <!-- This is button for showing Content list-->
+                <div class="w3-margin-top w3-bar-block w3-mobile">
+                    <button class="w3-button w3-margin-bottom w3-round-large w3-bar-item w3-left w3-hover-black" onclick="open_vba_sidebar()">
+                        <i class="material-icons">library_books</i> Visual Basic Content List
+                    </button>
+                </div>
+
+                <!-- This is top navigation bar -->
+                <div class="w3-bar">
+                    <a href="working_with_code_window.html" class="w3-button w3-rose">&#10094; Previous</a>
+                    <a href="sub_and_function_procedure.html" class="w3-button w3-rose w3-right">Next &#10095;</a>
+                </div>
+
+                <!-- Article Heading -->
+                <h2>Customizing Visual Basic Editor</h2>
+
+                <!-- Article -->
+                <p>
+                    If you are serious about becoming a Macro programmer, you will spend a lot of time with 
+                    VBA modules on your screen. To make things as comfortable as possible the VBE provides 
+                    quite a few customization options.
+                </p>
+                <p>
+                    When the VBE is active, choose “Tool &#8680; Options”. You will see a dialog box with four tabs:
+                </p>
+                <ol>
+                    <li>Editor</li>
+                    <li>Editor Format</li>
+                    <li>General</li>
+                    <li>Docking</li>                
+                </ol>
+                <p>I will discuss some of the most useful options in the section that follows.</p>
+
+                <!-- Dividing line -->
+                <div class="w3-container">
+                    <hr>
+                </div>
+
+                <!-- Using the Editor tab -->
+                <h3>Editor tab</h3>
+                <p>
+                    Below figure shows the options by clicking the Editor tab of the Option dialog box. 
+                    Use the options in the Editor tab to control how certain things works in the VBE.
+                </p>
+                <img class="w3-margin w3-image" src="vba_images/VISUAL BASIC EDITOR (VBE)/VBE Environment/4. Option-Editor Tab.PNG" alt="Option-Editor Tab">
+
+                <!-- Dividing line -->
+                <div class="w3-container">
+                    <hr>
+                </div>
+
+                <!-- Auto Syntax Check option -->
+                <h4>Auto Syntax Check option</h4>
+                <p>
+                    The Auto Syntax Check setting determines whether the VBE pops up a dialog box if it discovers a 
+                    syntax error while you’re entering your VBA code. The dialog box tells roughly what the problem is. 
+                    If you don’t choose this setting, VBE flags syntax errors by displaying them in a different color 
+                    from the rest of the code, and you don’t have to deal with any dialog boxes popping up on your screen.
+                </p>
+
+                <!-- Dividing line -->
+                <div class="w3-container">
+                    <hr>
+                </div>
+
+                <!-- Require Variable Declaration option -->
+                <h4>Require Variable Declaration option</h4>
+                <p>
+                    If Require Variable Declaration option is set, VBE inserts the following statement at 
+                    the beginning of each new VBA module you insert:
+                </p>
+
+                <!-- This is code example -->            
+                <div class="w3-panel w3-card w3-light-grey">
+                    <h3>Example</h3>
+                    <div class="w3-code notranslate">
+                        Option Explicit                       
+                    </div>
+                </div>
+                <p>
+                    Changing this setting affects only new modules, not existing modules. 
+                    If this statement appears in your module, you must explicitly define each variable you use. 
+                </p>
+
+                <!-- Dividing line -->
+                <div class="w3-container">
+                    <hr>
+                </div>
+
+                <!-- Auto List Members option -->
+                <h4>Auto List Members option</h4>
+                <p>
+                    If the Auto List Members option is set, VBE provides some help when you’re entering your VBA code. 
+                    It displays a list that would logically complete the statement you’re typing. 
+                    This bit of magic is sometimes called “IntelliSense.”
+                </p>
+                <p>
+                    This is one of the best features of the VBE, and I always keep it turned on. 
+                    Below figure shows an example, how it make easy writing your code.
+                </p>
+                <img class="w3-margin w3-image" src="vba_images/VISUAL BASIC EDITOR (VBE)/VBE Environment/5. Auto List Members option.PNG" alt="Auto List Members option">
+
+                <!-- Dividing line -->
+                <div class="w3-container">
+                    <hr>
+                </div>
+
+                <!-- Auto Quick Info option -->
+                <h4>Auto Quick Info option</h4>
+                <p>
+                    If the Auto Quick Info option is set, VBE displays information about functions and their 
+                    arguments as you type. This can be very helpful. Above figure shows this feature in action, 
+                    telling us about the arguments for the <em>“MsgBox”</em> function.
+                </p>
+
+                <!-- Dividing line -->
+                <div class="w3-container">
+                    <hr>
+                </div>
+
+                <!-- Auto Data Tips option -->
+                <h4>Auto Data Tips option</h4>
+                <p>
+                    If the Auto Data Tips option is set, VBE displays the value of the variable over 
+                    which your cursor is placed when you’re debugging code. When you enter the wonderful 
+                    world of debugging, you’ll appreciate this option.
+                </p>
+
+                <!-- Dividing line -->
+                <div class="w3-container">
+                    <hr>
+                </div>
+
+                <!-- Auto Indent setting -->
+                <h4>Auto Indent setting</h4>
+                <p>
+                    The Auto Indent setting determines whether VBE automatically indents each new line of 
+                    code the same as the previous line. I use indentations in my code, so I keep this option on.
+                </p>
+                <p>
+                    Use the <kbd>Tab</kbd> key to <em>“indent”</em> your code, not the spacebar. Also, you can use
+                    <em>“Shift+Tab”</em> to <em>“un-indent”</em> a line of code. If you want to indent more than just 
+                    one line, select all the lines you want to indent. Then press the <kbd>Tab</kbd> key.
+                </p>
+                <p>
+                    The VBE’s Edit toolbar (which is hidden by default) contains two useful buttons: 
+                    <strong>Indent</strong> and <strong>Outdent</strong>. These buttons let you quickly indent or 
+                    <em>“unindent”</em> a block of code. Select the code and click one of these buttons to change the block’s indenting.
+                </p>
+
+                <!-- Dividing line -->
+                <div class="w3-container">
+                    <hr>
+                </div>
+                            
+                <!-- Drag-and-Drop Text Editing option -->
+                <h4>Drag-and-Drop Text Editing option</h4>
+                <p>
+                    The Drag-and-Drop Text Editing option, when enabled, lets you copy and move text by 
+                    <em>dragging</em> and <em>dropping</em> with your mouse. I keep this option turned on, but I never use it. 
+                    I prefer to copy and move by using the keyboard.
+                </p>
+
+                <!-- Dividing line -->
+                <div class="w3-container">
+                    <hr>
+                </div>
+
+                <!-- Default to Full Module View option -->
+                <h4>Default to Full Module View option</h4>
+                <p>
+                    The Default to Full Module View option sets the default state for new modules. 
+                    (It doesn’t affect existing modules.) If set, procedures in the Code window appear as a 
+                    single scrollable list. If this option is turned off, you can see only one procedure at a time. 
+                    I keep this option turned on.
+                </p>
+
+                <!-- Dividing line -->
+                <div class="w3-container">
+                    <hr>
+                </div>
+
+                <!-- Procedure Separator option -->
+                <h4>Procedure Separator option</h4>
+                <p>
+                    When the Procedure Separator option is turned on, separator bars appear at the end of each 
+                    procedure in a Code window. I keep this option turned on.
+                </p>
+
+                <!-- Dividing line -->
+                <div class="w3-container">
+                    <hr>
+                </div>
+
+                <!-- Using the Editor Format tab -->
+                <h3>Editor Format tab</h3>
+                <p>
+                    Below figure shows the Editor Format tab of the Options dialog box. With this tab, you can customize the way the VBE looks.
+                </p>
+                <img class="w3-margin w3-image" src="vba_images/VISUAL BASIC EDITOR (VBE)/VBE Environment/6. Option-Editor Format Tab.PNG" alt="Option-Editor Format Tab">
+
+                <!-- Dividing line -->
+                <div class="w3-container">
+                    <hr>
+                </div>
+
+                <!-- Code Colors option -->
+                <h4>Code Colors option</h4>
+                <p>
+                    The Code Colors option lets you set the text color and background color displayed for various 
+                    elements of VBA code. This is largely a matter of personal preference. 
+                    Personally, I find the default colors to be just fine.
+                </p>
+
+                <!-- Dividing line -->
+                <div class="w3-container">
+                    <hr>
+                </div>
+
+                <!-- Font option -->
+                <h4>Font option</h4>
+                <p>
+                    The Font option lets you select the font that’s used in your VBA modules. 
+                    For best results, stick with a fixed-width font such as Courier New. In a fixed-width 
+                    font, all characters are exactly the same width. This makes your code more readable 
+                    because the characters are nicely aligned vertically, and you can easily distinguish 
+                    multiple spaces (which is sometimes useful).
+                </p>
+
+                <!-- Dividing line -->
+                <div class="w3-container">
+                    <hr>
+                </div>
+
+                <!-- Size setting -->
+                <h4>Size setting</h4>
+                <p>
+                    The Size setting specifies the point size of the font in the VBA modules. This setting is a 
+                    matter of personal preference determined by your video display resolution.
+                </p>
+
+                <!-- Dividing line -->
+                <div class="w3-container">
+                    <hr>
+                </div>
+
+                <!-- Margin Indicator Bar option -->
+                <h4>Margin Indicator Bar option</h4>
+                <p>
+                    This option controls the display of the vertical margin indicator bar in your modules. 
+                    You should keep this turned on; otherwise, you won’t be able to see the helpful 
+                    graphical indicators when you’re debugging your code.
+                </p>
+
+                <!-- Dividing line -->
+                <div class="w3-container">
+                    <hr>
+                </div>
+
+                <!-- Using the General tab -->
+                <h3>Using the General tab</h3>
+                <p>
+                    Below figure shows the options available under the General tab in the Options dialog box. 
+                    In almost every case, the default settings are just fine.
+                </p>
+                <img class="w3-margin w3-image" src="vba_images/VISUAL BASIC EDITOR (VBE)/VBE Environment/7. Option-General Tab.PNG" alt="Option-General Tab">
+                <p>
+                    The most important setting is Error Trapping. I strongly suggest that 
+                    you use the Break-On Unhandled Errors setting (which is the default). 
+                    If you use a different setting, your error-handling code won’t work.
+                </p>
+
+                <!-- Dividing line -->
+                <div class="w3-container">
+                    <hr>
+                </div>
+
+                <!-- Using the Docking tab -->
+                <h3>Using the Docking tab</h3>
+                <p>
+                    Below figure shows the Docking tab. These options determine how the various 
+                    windows in the VBE behave. When a window is docked, it is fixed in place along 
+                    one of the edges of the VBE program window. This makes it much easier to identify 
+                    and locate a particular window. If you turn off all docking, you have a big, confusing 
+                    mess of windows. Generally, the default settings work fine.
+                </p>
+                <img class="w3-margin w3-image" src="vba_images/VISUAL BASIC EDITOR (VBE)/VBE Environment/8. Option-Docking Tab.PNG" alt="Option-Docking Tab">          
+
+                <!-- This is bottom page navigation bar -->
+                <div class="w3-bar w3-margin-top w3-margin-bottom">
+                    <a href="working_with_code_window.html" class="w3-button w3-rose">&#10094; Previous</a>
+                    <a href="sub_and_function_procedure.html" class="w3-button w3-rose w3-right">Next &#10095;</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- This is right side space -->
+        <div class="w3-container w3-cell w3-hide-small"></div>
+
+    </div>
+
+    <!-- Footer notification of copyright -->
+    <div class="w3-container w3-teal">
+        <div class="w3-mobile w3-center">
+            <h4>Copyright by CADwCODE</h4>
+        </div> 
+    </div>
+</body>
+</html>

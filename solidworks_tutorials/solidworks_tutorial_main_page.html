@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8" />
+    <meta name="Keywords" content="visual basic for application tutorials, 
+    solidworks macro tutorials,SW macro tutorials, vba tutorial, cad macro tutorial, 
+    solidworks add-in tutorials" />
+    <meta name="Description" content="Well organized and easy to understand Macro/add-in 
+    tutorials for any Computer Aided Design (CAD) software, with examples show how to use 
+    Visual Basic for Application (VBA) and Macro development, how to create add-in using 
+    C# programming language." />
+    <title>SOLIDWORKS Macro</title>
+    <link rel="stylesheet" href="../w3.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+    <link rel="icon" href="../images/logo-black.png">    
+    <meta name="viewport" content="width=device-width, initial-scale=1">  
+
+    <!-- 
+        Scripts
+        1. This is script for showing menu bar in mobile.
+        2. This is a toggle button.
+        3. This is a script for opening and closing side bar
+    -->
+    <script>
+        // This is script 1 and 2
+        function openMenu(){
+            var x = document.getElementById("top_menu");
+            if (x.className.indexOf("w3-hide-small") == -1) {
+                x.className += "w3-hide-small";
+            } else {
+                x.className = x.className.replace("w3-hide-small", "");
+            }
+        }
+
+        // This is script 3
+        // Function for opeingin of side bar
+        function open_solidworks_sidebar(){
+            document.getElementById("solidworks_contentlist").style.width = "300px";
+        }
+        // Function for closing of side bar
+        function close_solidworks_sidebar(){
+            document.getElementById("solidworks_contentlist").style.width = "0";
+        }
+    </script>
+</head>
+<body>
+    <!-- This is our Heading -->
+    <div class="w3-container w3-cell-row w3-teal w3-mobile ">
+        <!-- This is Site name for large screen -->
+        <div class="w3-cell w3-mobile w3-hide-small"><h1>CADwCODE</h1></div>
+        <!-- This is Site name for small screen-->
+        <div class="w3-cell w3-mobile w3-hide-large w3-center"><h1>CADwCODE</h1></div>
+        <!-- This is Site description -->
+        <div class="w3-hide-small w3-cell w3-right w3-wide w3-mobile">LEARN CAD WITH CODE</div>        
+    </div>
+
+    <!-- Menu list -->
+    <div class="sticky">
+        <!-- This is menu list -->
+        <div class="w3-bar w3-large w3-dark-grey" style="font-family: 'Ubuntu', sans-serif">
+                <!-- This is menu icon comes in mobile -->
+                <i onclick="openMenu()" 
+                    class=" w3-button w3-bar-item w3-right w3-hide-large w3-hover-black material-icons">home</i>
+                <!-- This is our container for menu list -->
+                <div id="top_menu" class="w3-hide-small">
+                    <a href="../index.html" class="w3-bar-item w3-button w3-hover-black w3-mobile">Home</a>
+                    <a href="../vba_tutorials/vba_tutorial_main_page.html" class="w3-bar-item w3-button w3-hover-black w3-mobile">VBA</a>
+                    <a href="solidworks_tutorial_main_page.html" class="w3-bar-item w3-button w3-hover-black w3-rose w3-mobile">Solidworks</a>
+                    <a href="../about_website.html" class="w3-bar-item w3-button w3-hover-black w3-mobile">About</a>
+                    <a href="../about_privacy.html" class="w3-bar-item w3-button w3-hover-black w3-mobile">Privacy Policy</a>
+                    <a href="../disclaimer.html" class="w3-bar-item w3-button w3-hover-black w3-mobile">Disclaimer</a>
+                </div>
+        </div>
+                
+    </div>
+    <!-- Side bar for Solidworks -->
+    <div class="sidenav w3-bar-block" style="font-family: 'Ubuntu', sans-serif" id="solidworks_contentlist">
+        <i onclick="close_solidworks_sidebar()" class=" w3-button w3-bar-item w3-right w3-hover-black material-icons">close</i>
+        <a href="solidworks_tutorial_main_page.html" class="w3-bar-item w3-button w3-block w3-rose w3-mobile">SOLIDWORKS Macro</a>
+        <a href="solidworks_tutorial_Visual_Basic_in_solidworks.html" class="w3-bar-item w3-button w3-block w3-mobile">Visual Basic in SOLIDWORKS</a>
+        
+    </div>
+
+    <!-- This is my webpage -->
+    <div class="w3-container w3-cell-row">
+       
+        <!-- This is left side space -->
+        <div class="w3-container w3-cell w3-hide-small"></div>
+    
+        <!-- This is where i put my content -->
+        <div class="w3-container w3-cell">
+            <!-- This introduction to SOLIDWORKS macro -->
+            <div class="w3-main w3-container">
+    
+                <!-- This is button for showing Content list-->
+                <div class="w3-margin-top w3-bar-block w3-mobile">
+                    <button class="w3-button w3-margin-bottom w3-round w3-bar-item w3-left w3-hover-black" onclick="open_solidworks_sidebar()">
+                        <i class="material-icons">library_books</i> SOLIDWORKS Content List
+                    </button>
+                </div>
+    
+                <!-- This is top page navigation bar -->
+                <div class="w3-bar">
+                    <a href="../index.html" class="w3-button w3-rose">&#10094; Home</a>
+                    <a href="solidworks_tutorial_Visual_Basic_in_solidworks.html" class="w3-button w3-rose w3-right">Next &#10095;</a>
+                </div>
+    
+                <!-- Article Heading -->
+                <h2>Introduction to SOLIDWORKS Macro</h2>
+                <!-- Article -->
+                <p>
+                    VBA or Visual Basic for Application macros is easiest way to start with programming in SOLIDWORKS. 
+                    To use VBA, you must know working knowledge of SOLIDWORKS &#38; hands on experience on VB programming language.
+                </p>
+                <p> 
+                    With the help of VBA we can perform any simple action to any complex action. 
+                    But there are certain limitations to VBA. For example I found that for large 
+                    project Add-ins are created using VB.net or C# programming language. 
+                    It is not that with VBA you cannot do such kind of work. You can do almost 
+                    any type of work you want in SOLIDWORKS, but I found that other languages are 
+                    more useful in creating very large and complex projects. They are especially useful 
+                    in organizing the project. For example, in VB.net &#38; C#, we can create “Folders” for project arrangement.
+                </p>
+                <p> 
+                    But it not necessary that we should ignore VBA and jump to these advance languages. 
+                    Remember every complex project starts with few simple procedures. 
+                    Likewise after completing some simple macros you can combine more than 
+                    one macro to form a single macro and make it more complex over the period of time.
+                </p>
+    
+                <!-- This is bottom page navigation bar -->
+                <div class="w3-bar w3-margin-bottom">
+                    <a href="../index.html" class="w3-button w3-rose">&#10094; Home</a>
+                    <a href="solidworks_tutorial_Visual_Basic_in_solidworks.html" class="w3-button w3-rose w3-right">Next &#10095;</a>
+                </div>
+            </div>
+        </div>
+    
+        <!-- This is right side space -->
+        <div class="w3-container w3-cell w3-hide-small"></div>
+
+    </div>
+
+    <!-- !!!!!Use below 2 footer style for pages where content is less.!!!!!.-->
+    
+    <!-- Footer notification of copyright for large screen -->
+    <div class="w3-container w3-bottom w3-hide-small w3-teal">
+        <div class="w3-mobile w3-center">
+            <h4>Copyright by CADwCODE</h4>
+        </div> 
+    </div>
+
+    <!-- Footer notification of copyright for small screen -->
+    <div class="w3-container w3-hide-large w3-teal">
+        <div class="w3-mobile w3-center">
+            <h4>Copyright by CADwCODE</h4>
+        </div> 
+    </div>
+    
+</body>
+</html>

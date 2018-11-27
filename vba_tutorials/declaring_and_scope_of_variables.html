@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8" />
+    <meta name="Keywords" content="visual basic for application tutorials, 
+    solidworks macro tutorials,SW macro tutorials, vba tutorial, cad macro tutorial, 
+    solidworks add-in tutorials" />
+    <meta name="Description" content="Well organized and easy to understand Macro/add-in 
+    tutorials for any Computer Aided Design (CAD) software, with examples show how to use 
+    Visual Basic for Application (VBA) and Macro development, how to create add-in using 
+    C# programming language." />
+    <title>Declaring and Scoping Variables</title>
+    <link rel="stylesheet" href="../w3.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+    <link rel="icon" href="../images/logo-black.png">   
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- 
+        Scripts
+        1. This is script for showing menu bar in mobile.
+        2. This is a toggle button.
+        3. This is a script for opening and closing side bar
+    -->
+    <script>
+        // This is script 1 and 2
+        function openMenu(){
+            var x = document.getElementById("top_menu");
+            if (x.className.indexOf("w3-hide-small") == -1) {
+                x.className += "w3-hide-small";
+            } else {
+                x.className = x.className.replace("w3-hide-small", "");
+            }
+        }
+
+        // This is script 3
+        // Function for opeingin of side bar
+        function open_vba_sidebar(){
+            document.getElementById("vba_contentlist").style.width = "300px";
+        }
+        // Function for closing of side bar
+        function close_vba_sidebar(){
+            document.getElementById("vba_contentlist").style.width = "0";
+        }
+    </script>
+</head>
+<body>
+    <!-- This is our Heading -->
+    <div class="w3-container w3-cell-row w3-teal w3-mobile ">
+        <!-- This is Site name for large screen -->
+        <div class="w3-cell w3-mobile w3-hide-small"><h1>CADwCODE</h1></div>
+        <!-- This is Site name for small screen-->
+        <div class="w3-cell w3-mobile w3-hide-large w3-center"><h1>CADwCODE</h1></div>
+        <!-- This is Site description -->
+        <div class="w3-hide-small w3-cell w3-right w3-wide w3-mobile">LEARN CAD WITH CODE</div>          
+    </div>
+
+    <!-- Menu list -->
+    <div class="sticky">
+        <!-- This is menu list -->
+        <div class="w3-bar w3-large w3-dark-grey" style="font-family: 'Ubuntu', sans-serif">
+            <!-- This is menu icon comes in mobile -->
+            <i onclick="openMenu()" 
+                class=" w3-button w3-bar-item w3-right w3-hide-large w3-hover-black material-icons">home</i>
+            <!-- This is our container for menu list -->
+            <div id="top_menu" class="w3-hide-small">
+                <a href="../index.html" class="w3-bar-item w3-button w3-hover-black w3-mobile">Home</a>
+                <a href="vba_tutorial_main_page.html" class="w3-bar-item w3-button w3-rose w3-hover-black w3-mobile">VBA</a>
+                <a href="../solidworks_tutorials/solidworks_tutorial_main_page.html" class="w3-bar-item w3-button w3-hover-black w3-mobile">Solidworks</a>
+                <a href="../about_website.html" class="w3-bar-item w3-button w3-hover-black w3-mobile">About</a>
+                <a href="../about_privacy.html" class="w3-bar-item w3-button w3-hover-black w3-mobile">Privacy Policy</a>
+                <a href="../disclaimer.html" class="w3-bar-item w3-button w3-hover-black w3-mobile">Disclaimer</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Side bar for Visual Basic -->
+    <div class="sidenav w3-bar-block" style="font-family: 'Ubuntu', sans-serif" id="vba_contentlist">
+        <i onclick="close_vba_sidebar()" class=" w3-button w3-bar-item w3-right w3-hover-black material-icons">close</i>
+        <a href="vba_tutorial_main_page.html" class="w3-bar-item w3-button w3-block w3-mobile">Visual Basic Introduction</a>
+        <a href="visual_basic_editor.html" class="w3-bar-item w3-button w3-block w3-mobile">VISUAL BASIC EDITOR (VBE)</a>
+        <a href="working_with_project_window.html" class="w3-bar-item w3-button w3-block w3-mobile">Working with Project Window</a>
+        <a href="working_with_code_window.html" class="w3-bar-item w3-button w3-block w3-mobile">Working with Code Window</a>
+        <a href="customizing_vbe.html" class="w3-bar-item w3-button w3-block w3-mobile">Customizing Visual Basic Editor</a>
+        <a href="sub_and_function_procedure.html" class="w3-bar-item w3-button w3-block w3-mobile">Sub and Function Procedures</a>
+        <a href="sub_versus_function_procedure.html" class="w3-bar-item w3-button w3-block w3-mobile">Sub versus Function Procedures</a>
+        <a href="executing_sub_procedure.html" class="w3-bar-item w3-button w3-block w3-mobile">Executing Sub procedure</a>
+        <a href="executing_function_procedure.html" class="w3-bar-item w3-button w3-block w3-mobile">Executing Function procedure</a>
+        <a href="programming_concepts.html" class="w3-bar-item w3-button w3-block w3-mobile">Programming Concepts</a>
+        <a href="comments_in_vba.html" class="w3-bar-item w3-button w3-block w3-mobile">Using Comments in Your VBA Code</a>
+        <a href="understanding_data_types.html" class="w3-bar-item w3-button w3-block w3-mobile">Understanding Data types</a>
+        <a href="understanding_variables.html" class="w3-bar-item w3-button w3-block w3-mobile">Understanding Variables</a>
+        <a href="declaring_and_scope_of_variables.html" class="w3-bar-item w3-button w3-block w3-rose w3-mobile">Declaring and Scoping Variables</a>
+        <a href="procedure_only_variables.html" class="w3-bar-item w3-button w3-block w3-mobile">Procedure-only Variables</a>
+        <a href="module_only_variables.html" class="w3-bar-item w3-button w3-block w3-mobile">Module-only Variables</a>
+        <a href="public_static_and_life_of_variables.html" class="w3-bar-item w3-button w3-block w3-mobile">Public, Static and Life of Variables</a>
+        <a href="understanding_constants.html" class="w3-bar-item w3-button w3-block w3-mobile">Understanding Constants</a>
+        <a href="working_with_strings.html" class="w3-bar-item w3-button w3-block w3-mobile">Working with Strings</a>
+        <a href="assignment_statement.html" class="w3-bar-item w3-button w3-block w3-mobile">Assignment Statements</a>
+        <a href="operators.html" class="w3-bar-item w3-button w3-block w3-mobile">Operators</a>
+        <a href="working_with_arrays.html" class="w3-bar-item w3-button w3-block w3-mobile">Working with Arrays</a>
+    </div>
+
+    <!-- This is my webpage --> 
+    <div class="w3-container w3-cell-row">
+        
+        <!-- This is left side space -->
+        <div class="w3-container w3-cell w3-hide-small"></div>
+
+        <!-- This is where i put my content --> 
+        <div class="w3-container w3-cell">        
+            
+            <!-- This introduction to Visual Basic macro -->
+            <div class="w3-container">
+
+                <!-- This is button for showing Content list-->
+                <div class="w3-margin-top w3-bar-block w3-mobile">
+                    <button class="w3-button w3-margin-bottom w3-round-large w3-bar-item w3-left w3-hover-black" onclick="open_vba_sidebar()">
+                        <i class="material-icons">library_books</i> Visual Basic Content List
+                    </button>
+                </div>
+
+                <!-- This is top navigation bar -->
+                <div class="w3-bar">
+                    <a href="understanding_variables.html" class="w3-button w3-rose">&#10094; Previous</a>
+                    <a href="procedure_only_variables.html" class="w3-button w3-rose w3-right">Next &#10095;</a>
+                </div>
+
+                <!-- Article Heading -->
+                <h2>Declaring and Scoping Variables</h2>
+
+                <!-- Article -->
+                <p>
+                    If you read the previous topics, you now know a bit about <strong>variables</strong> and <strong>data types</strong>. 
+                    In this topic, you discover how to declare a variable as a certain data type.
+                </p>
+                <p>
+                    If you don’t declare the data type for a variable you use in a VBA routine, 
+                    VBA uses the default data type: <strong>Variant.</strong> Data stored as a <strong>Variant</strong> 
+                    acts like a chameleon; it changes type depending on what you do with it. 
+                    For example, if a variable is a <strong>Variant</strong> data type and contains a text string 
+                    that looks like a number (such as “123”), you can use this variable for <strong>string manipulations</strong> 
+                    as well as <strong>numeric calculations</strong>. VBA automatically handles the conversion. 
+                    Letting VBA handle data types may seem like an easy way out — but remember that you sacrifice speed and memory.
+                </p>
+                <p>
+                    Before you use variables in a procedure, it’s an excellent practice to <strong>declare</strong> 
+                    your variables — that is, tell VBA each variable’s data type. <strong>Declaring</strong> your 
+                    variables makes your program run <em>faster</em> and use memory more <em>efficiently</em>. 
+                    The default data type, <strong>Variant</strong>, causes VBA to repeatedly perform <em>time consuming checks</em> 
+                    and reserve <em>more memory than necessary</em>. If VBA knows a variable’s data type, 
+                    it doesn’t have to investigate and can reserve just enough memory to store the data.
+                </p>
+                <p>
+                    To force yourself to declare all the variables you use, include the following as the first statement in your VBA module:
+                </p>
+
+                <!-- This example show option explicit statement -->            
+                <div class="w3-panel w3-card w3-light-grey">
+                    <h3>Example</h3>
+                    <div class="w3-code notranslate">
+                        &nbsp;&nbsp;Option Explicit
+                    </div>
+                </div>
+
+                <!-- paragraph continues -->
+                <p>
+                    When this statement is present, you won’t be able to run your code if it contains any <strong>undeclared</strong> variables.
+                </p>
+                <p>
+                    You need to use <strong>"Option Explicit"</strong> only once: at the beginning of your module, 
+                    prior to the declaration of any procedures in the module. Keep in mind that the Option Explicit statement 
+                    applies <strong>only</strong> to the module in which it resides. If you have more than one VBA module in a project, 
+                    you need an Option Explicit statement for <strong>each</strong> module.
+                </p>
+                <p>
+                    Suppose that you use an undeclared variable (that is, a <strong>Variant</strong>) named <em>myDimension</em>. 
+                    At some point in your routine, you insert the following statement:
+                </p>
+
+                <!-- This is example of above paragraph -->            
+                <div class="w3-panel w3-card w3-light-grey">
+                    <h3>Example</h3>
+                    <div class="w3-code notranslate">
+                        &nbsp;&nbsp;myDimnsion = 11
+                    </div>
+                </div>
+
+                <!-- paragraph continues -->
+                <p>
+                    This <em>misspelled</em> variable, which is difficult to spot, will probably cause your routine 
+                    to give incorrect results. If you use <strong>Option Explicit</strong> at the beginning of your module 
+                    (forcing you to declare the myDimension variable), VBE generates an error if it encounters a misspelled 
+                    variation of that variable.
+                </p>
+                <p>
+                    To ensure that the <strong>Option Explicit</strong> statement is inserted automatically whenever 
+                    you insert a new VBA module; turn on the Require Variable Definition option. 
+                    You find it in the <em>Editor tab</em> of the <em>Options dialog box</em> 
+                    (in the VBE, choose Tools &#8680; Options). I highly recommend doing so.
+                </p>
+                <p>
+                    Declaring your variables also lets you take advantage of a shortcut that can save some typing. 
+                    Just type the first two or three characters of the variable name, and then press <kbd>Ctrl + Space</kbd>. 
+                    The VBE will either complete the entry for you or — if the choice is ambiguous — 
+                    show you a list of matching words to select from. In fact, this slick trick works with reserved words and functions, too.
+                </p>
+                <p>
+                    You now know the advantages of declaring variables, but how do you do this? 
+                    The most common way is to use a <strong>Dim</strong> statement. Here are some examples of variables being declared:
+                </p>
+
+                <!-- This is example of how to declaring variables -->            
+                <div class="w3-panel w3-card w3-light-grey">
+                    <h3>Example</h3>
+                    <div class="w3-code notranslate">
+                        &nbsp;&nbsp;Dim YourName as String<br>
+                        &nbsp;&nbsp;Dim PartLength as Long<br>
+                        &nbsp;&nbsp;Dim bRet as Boolean<br>
+                        &nbsp;&nbsp;Dim X<br>
+                    </div>
+                </div>
+
+                <!-- paragraph continue -->
+                <p>
+                    The first <em>three</em> variables are declared as a <em>specific</em> data type. 
+                    The last variable, <strong>X</strong>, is not declared as a specific data type, 
+                    so it’s treated as a Variant (it can be anything).
+                </p>
+                <p>
+                    Besides <strong>Dim</strong>, VBA has three other keywords that are used to declare variables:
+                </p>
+
+                <!-- List of other declaring statements -->
+                <ul>
+                    <li>Static</li>
+                    <li>Public</li>
+                    <li>Private</li>
+                </ul>
+                <p>
+                    I explain more about the <em>Dim, Static, Public, and Private</em> keywords later on, 
+                    but first I must cover two other topics that are relevant here: <strong>a variable’s scope</strong> 
+                    and <strong>a variable’s life</strong>.
+                </p>
+                <p>
+                    Recall that your code can have any number of VBA modules. And a VBA module can have any 
+                    number of Sub and Function procedures. A <em>variable’s scope</em> determines which modules and 
+                    procedures can use the variable. Below Table describes the scopes in detail.
+                </p>
+                <p>
+                    Confused? Keep reading and you’ll see some examples that will make this stuff clear.
+                </p>
+
+                <!-- Table for VBA’s Variable’s Scope -->
+                <table class="w3-table-all w3-mobile w3-card-4">
+                    <!-- This is caption for table, for this i have not used standard caption instead used table heading -->
+                    <tr>
+                        <th class="w3-center"colspan="2">VBA’s Variable’s Scope</th>
+                    </tr>
+                    <tr>
+                        <th>Scope</th>
+                        <th>How the Variable is Declared</th>
+                    </tr>
+                    <tr>
+                        <td>Procedure only</td>
+                        <td>By using a <strong>Dim</strong> or a <strong>Static</strong> statement in the procedure that uses the variable.</td>
+                    </tr>
+                    <tr>
+                        <td>Module only</td>
+                        <td>By using a <strong>Dim</strong> or a <strong>Private</strong> statement 
+                            before the first <strong>Sub</strong> or <strong>Function</strong> statement in the module.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>All procedures in all modules</td>
+                        <td>
+                            By using a <strong>Public</strong> statement before the first <strong>Sub</strong> or 
+                            <strong>Function</strong> statement in the module.
+                        </td>
+                    </tr>
+                </table>
+
+                <!-- This is bottom page navigation bar -->
+                <div class="w3-bar w3-margin-top w3-margin-bottom">
+                    <a href="understanding_variables.html" class="w3-button w3-rose">&#10094; Previous</a>
+                    <a href="procedure_only_variables.html" class="w3-button w3-rose w3-right">Next &#10095;</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- This is right side space -->
+        <div class="w3-container w3-cell w3-hide-small"></div>
+
+    </div>
+
+    <!-- Footer notification of copyright -->
+    <div class="w3-container w3-teal">
+        <div class="w3-mobile w3-center">
+            <h4>Copyright by CADwCODE</h4>
+        </div> 
+    </div>
+</body>
+</html>
