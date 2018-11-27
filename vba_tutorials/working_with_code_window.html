@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8" />
+    <meta name="Keywords" content="visual basic for application tutorials, 
+    solidworks macro tutorials,SW macro tutorials, vba tutorial, cad macro tutorial, 
+    solidworks add-in tutorials" />
+    <meta name="Description" content="Well organized and easy to understand Macro/add-in 
+    tutorials for any Computer Aided Design (CAD) software, with examples show how to use 
+    Visual Basic for Application (VBA) and Macro development, how to create add-in using 
+    C# programming language." />
+    <title>Working with Code Window</title>
+    <link rel="stylesheet" href="../w3.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+    <link rel="icon" href="../images/logo-black.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- 
+        Scripts
+        1. This is script for showing menu bar in mobile.
+        2. This is a toggle button.
+        3. This is a script for opening and closing side bar
+    -->
+    <script>
+        // This is script 1 and 2
+        function openMenu(){
+            var x = document.getElementById("top_menu");
+            if (x.className.indexOf("w3-hide-small") == -1) {
+                x.className += "w3-hide-small";
+            } else {
+                x.className = x.className.replace("w3-hide-small", "");
+            }
+        }
+
+        // This is script 3
+        // Function for opeingin of side bar
+        function open_vba_sidebar(){
+            document.getElementById("vba_contentlist").style.width = "300px";
+        }
+        // Function for closing of side bar
+        function close_vba_sidebar(){
+            document.getElementById("vba_contentlist").style.width = "0";
+        }
+    </script>
+</head>
+<body>
+    <!-- This is our Heading -->
+    <div class="w3-container w3-cell-row w3-teal w3-mobile ">
+        <!-- This is Site name for large screen -->
+        <div class="w3-cell w3-mobile w3-hide-small"><h1>CADwCODE</h1></div>
+        <!-- This is Site name for small screen-->
+        <div class="w3-cell w3-mobile w3-hide-large w3-center"><h1>CADwCODE</h1></div>
+        <!-- This is Site description -->
+        <div class="w3-hide-small w3-cell w3-right w3-wide w3-mobile">LEARN CAD WITH CODE</div>         
+    </div>
+
+    <!-- Menu list -->
+    <div class="sticky">
+        <!-- This is menu list -->
+        <div class="w3-bar w3-large w3-dark-grey" style="font-family: 'Ubuntu', sans-serif">
+            <!-- This is menu icon comes in mobile -->
+            <i onclick="openMenu()" 
+                class=" w3-button w3-bar-item w3-right w3-hide-large w3-hover-black material-icons">home</i>
+            <!-- This is our container for menu list -->
+            <div id="top_menu" class="w3-hide-small">
+                <a href="../index.html" class="w3-bar-item w3-button w3-hover-black w3-mobile">Home</a>
+                <a href="vba_tutorial_main_page.html" class="w3-bar-item w3-button w3-rose w3-hover-black w3-mobile">VBA</a>
+                <a href="../solidworks_tutorials/solidworks_tutorial_main_page.html" class="w3-bar-item w3-button w3-hover-black w3-mobile">Solidworks</a>
+                <a href="../about_website.html" class="w3-bar-item w3-button w3-hover-black w3-mobile">About</a>
+                <a href="../about_privacy.html" class="w3-bar-item w3-button w3-hover-black w3-mobile">Privacy Policy</a>
+                <a href="../disclaimer.html" class="w3-bar-item w3-button w3-hover-black w3-mobile">Disclaimer</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Side bar for Visual Basic -->
+    <div class="sidenav w3-bar-block" style="font-family: 'Ubuntu', sans-serif" id="vba_contentlist">
+        <i onclick="close_vba_sidebar()" class=" w3-button w3-bar-item w3-right w3-hover-black material-icons">close</i>
+        <a href="vba_tutorial_main_page.html" class="w3-bar-item w3-button w3-block w3-mobile">Visual Basic Introduction</a>
+        <a href="visual_basic_editor.html" class="w3-bar-item w3-button w3-block w3-mobile">VISUAL BASIC EDITOR (VBE)</a>
+        <a href="working_with_project_window.html" class="w3-bar-item w3-button w3-block w3-mobile">Working with Project Window</a>
+        <a href="working_with_code_window.html" class="w3-bar-item w3-button w3-block w3-rose w3-mobile">Working with Code Window</a>
+        <a href="customizing_vbe.html" class="w3-bar-item w3-button w3-block w3-mobile">Customizing Visual Basic Editor</a>
+        <a href="sub_and_function_procedure.html" class="w3-bar-item w3-button w3-block w3-mobile">Sub and Function Procedures</a>
+        <a href="sub_versus_function_procedure.html" class="w3-bar-item w3-button w3-block w3-mobile">Sub versus Function Procedures</a>
+        <a href="executing_sub_procedure.html" class="w3-bar-item w3-button w3-block w3-mobile">Executing Sub procedure</a>
+        <a href="executing_function_procedure.html" class="w3-bar-item w3-button w3-block w3-mobile">Executing Function procedure</a>
+        <a href="programming_concepts.html" class="w3-bar-item w3-button w3-block w3-mobile">Programming Concepts</a>
+        <a href="comments_in_vba.html" class="w3-bar-item w3-button w3-block w3-mobile">Using Comments in Your VBA Code</a>
+        <a href="understanding_data_types.html" class="w3-bar-item w3-button w3-block w3-mobile">Understanding Data types</a>
+        <a href="understanding_variables.html" class="w3-bar-item w3-button w3-block w3-mobile">Understanding Variables</a>
+        <a href="declaring_and_scope_of_variables.html" class="w3-bar-item w3-button w3-block w3-mobile">Declaring and Scoping Variables</a>
+        <a href="procedure_only_variables.html" class="w3-bar-item w3-button w3-block w3-mobile">Procedure-only Variables</a>
+        <a href="module_only_variables.html" class="w3-bar-item w3-button w3-block w3-mobile">Module-only Variables</a>
+        <a href="public_static_and_life_of_variables.html" class="w3-bar-item w3-button w3-block w3-mobile">Public, Static and Life of Variables</a>
+        <a href="understanding_constants.html" class="w3-bar-item w3-button w3-block w3-mobile">Understanding Constants</a>
+        <a href="working_with_strings.html" class="w3-bar-item w3-button w3-block w3-mobile">Working with Strings</a>
+        <a href="assignment_statement.html" class="w3-bar-item w3-button w3-block w3-mobile">Assignment Statements</a>
+        <a href="operators.html" class="w3-bar-item w3-button w3-block w3-mobile">Operators</a>
+        <a href="working_with_arrays.html" class="w3-bar-item w3-button w3-block w3-mobile">Working with Arrays</a>
+    </div>
+
+    <!-- This is my webpage --> 
+    <div class="w3-container w3-cell-row">
+        
+        <!-- This is left side space -->
+        <div class="w3-container w3-cell w3-hide-small"></div>
+
+        <!-- This is where i put my content -->  
+        <div class="w3-container w3-cell">        
+            
+            <!-- This introduction to Visual Basic macro -->
+            <div class="w3-container">
+
+                <!-- This is button for showing Content list-->
+                <div class="w3-margin-top w3-bar-block w3-mobile">
+                    <button class="w3-button w3-margin-bottom w3-round-large w3-bar-item w3-left w3-hover-black" onclick="open_vba_sidebar()">
+                        <i class="material-icons">library_books</i> Visual Basic Content List
+                    </button>
+                </div>
+
+                <!-- This is top navigation bar -->
+                <div class="w3-bar">
+                    <a href="working_with_project_window.html" class="w3-button w3-rose">&#10094; Previous</a>
+                    <a href="customizing_vbe.html" class="w3-button w3-rose w3-right">Next &#10095;</a>
+                </div>
+
+                <!-- Article Heading -->
+                <h2>Working with Code Window</h2>
+
+                <!-- Article -->
+                <p>
+                    As you become proficient with VBA, you spend a lot of time with working in the Code window. 
+                    Macros that you record are stored in a module, and you can type a VBA code directly into a VBA module.
+                </p>
+
+                <!-- Dividing line -->
+                <div class="w3-container">
+                    <hr>
+                </div>
+
+                <!-- Minimize and maximize Code windows -->
+                <h3>Minimize and maximize Code windows</h3>
+                <p>
+                    If you have several projects open, the VBE may have lots of Code window at any given time. 
+                    Below figure shows an example of this.
+                </p>
+                <img class="w3-margin w3-image" src="vba_images/VISUAL BASIC EDITOR (VBE)/VBE Environment/2. Example of Many code window.PNG" alt="Example of Many code window">
+                <p>
+                    Code windows are much like your files opened in your CAD program. 
+                    You can minimize them, maximize them, resize them, and hide them and so on. 
+                    Most people find it much easier to maximize the code window that they are working on. 
+                    Doing so lets you see more code and keeps you from getting distracted.
+                </p>
+                <p>
+                    To maximize the Code window, click the maximize button in its title bar or just double-click 
+                    the title bar of Code window to maximize it. To restore a window to its original size, 
+                    click the restore button. When the Code window is maximized, its title bar is not visible, 
+                    so you will find the restore below the VBE title bar.
+                </p>
+                <p>
+                    Sometimes you want to have two or more Code windows visible. For example, you want to compare 
+                    the code in the two modules or copy code from one module to another. You can arrange the windows manually, 
+                    or use the "Window &#8680; Tile Horizontally" or "Window &#8680; Tile Vertically" command to arrange them automatically.
+                </p>
+                <p>
+                    You can quickly switch among code window by pressing <kbd>Ctrl + TAB</kbd>. If you repeat that 
+                    key combination, you keep cycling through all the open code windows. 
+                    Pressing <kbd>Ctrl + Shift + TAB</kbd> cycles through the windows in reverse order.
+                </p>
+                <p>
+                    Minimizing a window gets it out of the way. You can also click the window close button in a 
+                    Code window’s title bar to close the window completely. (Closing a window just hides it; 
+                    you won’t lose anything.) To open it again, just double-click the appropriate object in 
+                    the Project window. Working with these Code windows sounds difficult that it really is.
+                </p>
+
+                <!-- Dividing line -->
+                <div class="w3-container">
+                    <hr>
+                </div>
+
+                <!-- Creating a Module -->
+                <h3>Creating a Module</h3>
+                <p>In general, a VBA module can hold three types of code:</p>
+                <ul>
+                    <li>
+                        <strong>Declaration:</strong> One or more information statement that you provide to VBA. 
+                        For example, you can declare the data type for variables you plan to use, or set some 
+                        other module-wide options.
+                    </li>
+                    <li><strong>Sub procedures:</strong> A set of programming instructions that performs some actions.</li>
+                    <li><strong>Function procedures:</strong> A set of programming instructions that returns a single value.</li>
+                </ul>
+                <p>
+                    A single VBA module can store any number of Sub procedures, Function procedure and declaration. 
+                    Well, there is a limit – about 64,000 characters per module. It is very rare that if anybody 
+                    reaches that limit but if someone reaches then the solution is simply insert a new module.
+                </p>
+                <p>
+                    How you organize a VBA module is totally up to you. Some people prefer to keep all 
+                    their VBA code in a single module, others (like me) likes to split up the code into several 
+                    different modules or even classes. It is a personal choice like arranging furniture.
+                </p>
+
+                <!-- Dividing line -->
+                <div class="w3-container">
+                    <hr>
+                </div>
+
+                <!-- Inserting VBA code into a Module -->
+                <h3>Inserting VBA code into a Module</h3>
+                <p>
+                    An empty VBA module is like a fake food you see in the advertisements. 
+                    It looks good but it does not really do much. Before you can do anything meaningful, 
+                    you must have some VBA code in the VBA module. You can insert VBA code into VBA module in three ways:
+                </p>
+                <ol>
+                    <li>Insert code directly into code window.</li>
+                    <li>Use the macro recorder to record your actions and convert them into VBA code.</li>
+                    <li>Copy the code from one module and paste it into another module.</li>
+                </ol>
+
+                <!-- Dividing line -->
+                <div class="w3-container">
+                    <hr>
+                </div>
+
+                <!-- Entering code directly into a module -->
+                <h3>Entering code directly into a module</h3>
+                <p>
+                    Sometimes the best route is the most direct one. Entering the code directly involves, 
+                    typing the code via your keyboard. Entering and editing a text in a VBA module works as you might expect. 
+                    You can select, copy, cut, paste and do other things as you do in other word processing software.
+                </p>
+                <p>
+                    Use the <kbd>TAB</kbd> key to indent some of the lines to make your code easier to read. 
+                    This is not necessary, but it is a good habit to acquire. As you go through you 
+                    will understand why indenting code lines is helpful.
+                </p>
+                <p>
+                    A single line of VBA code can be as long as you like. However, you may want to use the 
+                    “line-continuation” character to break up the lengthy line of code. To continue a single 
+                    line of code (also known as statement) from one line to next, end the first line with a 
+                    space followed by an underscore (_). Then continue the statement in the next line. 
+                    Below is given the example of a single statement split into two lines:
+                </p>
+
+                <!-- This is code example -->            
+                <div class="w3-panel w3-card w3-light-grey">
+                    <h3>Example</h3>
+                    <div class="w3-code notranslate">
+                        set swPart = swApp.NewDocument(swApp.GetUserPreferenceStringValue _<br>
+                        &nbsp; &nbsp; (swUserPreferenceStringValue_e.swDefaultTemplatePart),0,0,0)                        
+                    </div>
+                </div>
+
+                <p>
+                    This statement would perform the same way if it were entered in a single line 
+                    (with no continuation characters). Notice that I indented the second line of statement. 
+                    Indenting is optional but it clarifies the fact that these lines are not separate statements.
+                </p>
+                <p>
+                    (If you are wondering what above statement does, then the answer is above statement open a new part 
+                    with default part template in SolidWorks. This code is not inserted using macro recorder, 
+                    instead I write it manually to find a default part template and use that template to open a new part.)
+                </p>
+                <p>
+                    The engineers who designed VBE knew that people like us would be making mistakes. 
+                    Therefore, the VBE has multiple levels of <strong>Undo</strong> and <strong>Redo</strong>. 
+                    If you deleted a statement that you should not have, use the <strong>Undo</strong> button on 
+                    the toolbar (or press <kbd>Ctrl+Z</kbd>) until the statement shows up. After undoing, you can use the 
+                    <strong>Redo</strong> button to perform the changes you have undone. This redo/undo stuff is much like 
+                    you use in other software. Until you use it, you cannot understand.
+                </p>
+                <p>Ready to enter some live code, try the following steps:</p>
+                <ol>
+                    <li>Go to your VBE.</li>
+                    <li>Double-click your module if it is not opened.</li>
+                    <li>Go to COde Window.</li>
+                    <li>Type the following code into Code window:</li>
+
+                    <!-- This is code example -->
+                    <div class="w3-panel w3-card w3-light-grey">
+                        <h3>Example</h3>
+                        <div class="w3-code notranslate">
+                            Sub GuessName()<br>
+                                &nbsp; &nbsp; Msg = “Is this a CAD Software?”<br>
+                                &nbsp; &nbsp; Ans = MsgBox(Msg, vbYesNo)<br>
+                                &nbsp; &nbsp; If Ans = vbNo Then MsgBox “Oh, that’s fine.”<br>
+                                &nbsp; &nbsp; If Ans = vbYes Then MsgBox “You must be joking!”<br>
+                            End Sub
+                        </div>
+                    </div>
+
+                    <li>
+                        Make sure the cursor is located anywhere within the text you typed, 
+                        and then press <strong>F5</strong> to execute the procedure.
+                    </li>
+                </ol>
+                <p>
+                    <strong>F5</strong> is a shortcut for the <samp>Run &#8680; Run Sub/UserForm</samp> command. 
+                    If you entered the code correctly, VBE execute the procedure, and you can 
+                    respond to the simple dialog box as shown in below figure.
+                </p>
+                <img class="w3-margin w3-image" src="vba_images/VISUAL BASIC EDITOR (VBE)/VBE Environment/3. Guess Name Dialog box.PNG" alt="Guess Name Dialog box">
+                <p>
+                    When you enter the code listed in step 4, you might notice that the VBE makes some adjustments 
+                    to the text you enter. For example, after you type the sub statement, the VBE automatically 
+                    insert the End Sub statement, and if omit the space before or after an equal sign, 
+                    the VBE insert the space for you. Also, the VBE changes the color and capitalization of some text. 
+                    This is all perfectly normal. It is just VBE’s way of keeping things neat and readable.
+                </p>
+                <p>
+                    If you followed the previous steps, you just wrote a VBA Sub procedure, also known as a macro. 
+                    When you press <strong>F5</strong>, VBE executes the code and follows the instructions. 
+                    In other words, VBE evaluates each statement and does what you told it to do.
+                </p>
+                <p>This simple macro uses the following concepts:</p>
+                <ul>
+                    <li>Defining a Sub procedure (the first line).</li>
+                    <li>Assigning values to variables (Msg and Ans).</li>
+                    <li>Using a built-in VBA function (MsgBox).</li>
+                    <li>Using built-in VBA constants (vbYesNo, vbNo, and vbYes).</li>
+                    <li>Using an If-Then construct (twice).</li>
+                    <li>Ending a Sub procedure (the last line)</li>
+                </ul>
+
+                <!-- Dividing line -->
+                <div class="w3-container">
+                    <hr>
+                </div>
+
+                <!-- Using the Macro recorder -->
+                <h3>Using the Macro recorder</h3>
+                <p>
+                    Another way you can get code into a VBA module is by recording your actions, using the in-built macro recorder.
+                </p>
+                <p>
+                    By the way, there is absolutely no way you can record the “GuessName” procedure shown 
+                    in the preceding section. You can record only things that you can do directly in your CAD application. 
+                    Displaying a message box is not in application's normal repertoire. The macro recorder is useful, 
+                    but in many cases, you’ll probably need to enter at least some code manually.
+                </p>
+                <p>
+                    We have already seen how macros are recorded. So there is no need for us to go twice for same thing. 
+                    If you want to see how it is done go to <a href="../solidworks_tutorials/solidworks_tutorial_Visual_Basic_in_solidworks.html" class="w3-hover-text-red"><strong>Open VBA in Solidworks topic</strong></a>.
+                </p>
+
+                <!-- Dividing line -->
+                <div class="w3-container">
+                    <hr>
+                </div>
+
+                <!-- Copying VBA code -->
+                <h3>Copying VBA code</h3>
+                <p>
+                    The final method for getting code into a VBA module is to copy it from another module or 
+                    from some other place (such as a Web site). For example, a Sub or Function procedure that 
+                    you write for one project might also be useful in another project. Instead of wasting time 
+                    in re-entering the code, you can activate the module and use the normal Clipboard copy-and-paste 
+                    procedures. After pasting it into a VBA module, you can modify the code if necessary. You’ll also 
+                    find lots of VBA code examples on the Web. If you’d like to try them, select the code in your 
+                    browser and press <kbd>Ctrl+C</kbd> to copy it. Then, activate a module and press <kbd>Ctrl+V</kbd> to paste it.
+                </p>
+
+                <!-- This is bottom page navigation bar -->
+                <div class="w3-bar w3-margin-top w3-margin-bottom">
+                    <a href="working_with_project_window.html" class="w3-button w3-rose">&#10094; Previous</a>
+                    <a href="customizing_vbe.html" class="w3-button w3-rose w3-right">Next &#10095;</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- This is right side space -->
+        <div class="w3-container w3-cell w3-hide-small"></div>
+
+    </div>
+
+    <!-- Footer notification of copyright -->
+    <div class="w3-container w3-teal">
+        <div class="w3-mobile w3-center">
+            <h4>Copyright by CADwCODE</h4>
+        </div> 
+    </div>
+</body>
+</html>

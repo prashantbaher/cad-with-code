@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8" />
+    <title>Visual Basic Tutorials</title>
+    <link rel="stylesheet" href="../w3.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <meta name="keyword" content="solidworks macro, solidworks api, vba tutorial" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 
+        Scripts
+        1. This is script for showing menu bar in mobile.
+        2. This is a toggle button.
+        3. This is a script for opening and closing side bar
+    -->
+    <script>
+        // This is script 1 and 2
+        function openMenu(){
+            var x = document.getElementById("top_menu");
+            if (x.className.indexOf("w3-hide-small") == -1) {
+                x.className += "w3-hide-small";
+            } else {
+                x.className = x.className.replace("w3-hide-small", "");
+            }
+        }
+
+        // This is script 3
+        // Function for opeingin of side bar
+        function open_vba_sidebar(){
+            document.getElementById("vba_contentlist").style.width = "300px";
+        }
+        // Function for closing of side bar
+        function close_vba_sidebar(){
+            document.getElementById("vba_contentlist").style.width = "0";
+        }
+
+        function hide(){
+            var y = document.getElementById("vba_contentlist");
+            if (y.scroll()){
+                y.style.top = 88;
+            } else {
+                y.style.top = 144;
+            }
+        }
+        
+    </script>
+</head>
+<body>
+    <!-- This is our Heading -->
+    <div class="w3-container w3-cell-row w3-teal w3-mobile ">
+        <!-- This is Site name -->
+        <div class="w3-cell w3-mobile">
+           <h1>CADwCODE</h1>
+        </div>       
+        <!-- This is Site description -->
+        <div class="w3-hide-small w3-cell w3-right w3-wide w3-mobile">LEARN CAD WITH CODE</div>
+        
+    </div>
+
+    <!-- Menu list -->
+    <div class="sticky">
+        <!-- This is menu list -->
+        <div class="w3-bar w3-large w3-dark-grey">
+                <!-- This is menu icon comes in mobile -->
+                <i onclick="openMenu()" 
+                    class=" w3-button w3-bar-item w3-right w3-hide-large w3-hover-black material-icons">home
+                </i>
+                <!-- This is list of content menu -->
+                <i onclick="open_vba_sidebar()" class="w3-button w3-bar-item w3-left w3-hover-black material-icons">menu</i>
+                <!-- This is our container for menu list -->
+                <div id="top_menu" class="w3-hide-small">
+                    <a href="../Home.html" class="w3-bar-item w3-button w3-hover-black w3-mobile">Home</a>
+                    <a href="vba_tutorial_main_page.html" class="w3-bar-item w3-button w3-red w3-hover-black w3-mobile">VBA</a>
+                    <a href="../solidworks_tutorials/solidworks_tutorial_main_page.html" class="w3-bar-item w3-button w3-hover-black w3-mobile">Solidworks</a>
+                    <a href="../about_website.html" class="w3-bar-item w3-button w3-hover-black w3-mobile">About website</a>
+                    <a href="../disclaimer.html" class="w3-bar-item w3-button w3-hover-black w3-mobile">Disclaimer</a>
+                </div>
+        </div>
+    </div>
+
+    <!-- Side bar for Visual basic -->
+    <div class="sidenav w3-bar-block " id="vba_contentlist">
+        <i onclick="close_vba_sidebar()" class=" w3-button w3-bar-item w3-right w3-hover-black material-icons">close</i>
+        <a href="vba_tutorial_main_page.html" class="w3-bar-item w3-button w3-block w3-teal-sidebar w3-mobile">Visual Basic INTRODUCTION</a>        
+        <a href="visual_basic_editor.html" class="w3-bar-item w3-button w3-block w3-mobile">VISUAL BASIC EDITOR (VBE)</a>
+        <a href="working_with_project_window.html" class="w3-bar-item w3-button w3-block w3-mobile">Working with Project Window</a>
+        <a href="working_with_code_window.html" class="w3-bar-item w3-button w3-block w3-mobile">Working with Code Window</a>
+        <a href="customizing_vbe.html" class="w3-bar-item w3-button w3-block w3-mobile">Customizing Visual Basic Editor</a>
+        <a href="sub_and_function_procedure.html" class="w3-bar-item w3-button w3-block w3-mobile">Sub and Function Procedures</a>
+        <a href="sub_versus_function_procedure.html" class="w3-bar-item w3-button w3-block w3-mobile">Sub versus Function Procedures</a>
+    </div>
+
+    <!-- Page space for page content --> 
+    <div>        
+        
+        <!-- This introduction to Visual basic macro -->
+        <div class="w3-main w3-container">
+
+            <!-- This is button for showing Content list-->
+            <div class="w3-margin-top w3-bar-block w3-border-right w3-mobile">
+                <button class="w3-button w3-margin-bottom w3-round-large w3-bar-item w3-left w3-hover-black" onclick="open_vba_sidebar()">
+                    <i class="material-icons">library_books</i>Visual Basic Content List
+                </button>
+            </div>
+
+            <!-- This is top navigation bar -->
+            <div class="w3-bar w3-border w3-round">
+                <a href="../Home.html" class="w3-button">&#10094; Home</a>
+                <a href="visual_basic_editor.html" class="w3-button w3-right">Next &#10095;</a>
+            </div>
+
+            <!-- Article Heading -->
+            <h2>An introduction to Visual Basic for Application (VBA)</h2>
+
+            <!-- Article -->
+            <p>To understand Visual Basic for Application, lets look at the following questions.</p>
+            
+            <!-- What is VBA? -->
+            <h3>What is Visual Basic for Application?</h3>
+
+            <!-- Answer for above question -->
+            <p>
+                Visual Basic for Applications also known as VBA, is a programming language developed by Microsoft. 
+                SOLIDWORKS, along with Excel and other software of Office Suit, 
+                includes VBA language (at no extra cost). 
+                In a nutshell, VBA is a tool that people use to develop program that control SOLIDWORKS.
+            </p>
+
+            <p>
+                Think about a robot that knows everything about SOLIDWORKS. 
+                This robot can read instruction, and it can also operate SOLIDWORKS very fast and accurate. 
+                When you want the robot to do something in SOLIDWORKS, 
+                you write up a set of robotic instruction by using special codes. 
+                Tell the robot to follow your instruction, while you sit back and take some rest. 
+                That’s kind of what VBA is all about. 
+            </p>
+
+            <!-- Dividing line -->
+            <div class="w3-container">
+                <hr>
+            </div>
+
+            <!-- What can you do with VBA? -->
+            <h3>What can you do with VBA?</h3>
+
+            <!-- Answer for above question -->
+            <p>
+                You probably know that people use any CAD software, not just SOLIDWORKS, for different tasks. 
+                Below are some examples:
+            </p>
+
+            <ul>
+                <li>Creating sketches</li>
+                <li>Creating 3D models</li>
+                <li>Creating Simple to Complex assemblies of 3D models</li>
+                <li>Linking files with external softwares mostly excel and many more tasks</li>
+            </ul>
+
+            <p>
+                This list could go on and on, but you get the idea the idea. 
+                My point is simply that a CAD Software for example SOLIDWORKS used for wide variety of things. 
+                Everyone visiting this website has different needs and expectations. 
+                One thing virtually every visitor has common is the need to automate some aspect of their work. 
+                That is what VBA is all about.
+            </p>
+
+            <!-- Dividing line -->
+            <div class="w3-container">
+                <hr>
+            </div>
+
+            <!-- What are the advantages and disadvantages of VBA? -->
+            <h3>What are the advantages and disadvantages of VBA?</h3>
+
+            <!-- Answer for above question -->
+            <p>In this section, I briefly describe the good things about VBA – and I also explore its darker side.</p>
+
+            <!-- VBA advantages -->
+            <h4>VBA Advantages</h4>
+            <p>
+                You can automate almost anything you do in SOLIDWORKS. 
+                To do so, you write instructions that SOLIDWORKS carries out. 
+                Automating a task by using VBA offers several advantages:
+            </p>
+
+            <!-- Lists of advantages -->
+            <ol>
+                <li>SOLIDWORKS always executes the tasks in exactly the same way. (In most cases consistency is good.)</li>
+                <li>SOLIDWORKS performs the task much faster than you do it manually.</li>
+                <li>If you are a good macro programmer, SOLIDWORKS always performs the task without error.</li>
+                <li>If you set things properly, someone who don’t know anything about SOLIDWORKS can perform task.</li>
+                <li>For long, time-consuming tasks, you don’t have to sit in front of your computer and get board. SOLIDWORKS does work, while you drink water.</li>
+            </ol>
+
+            <!-- VBA disadvantages -->
+            <h4>VBA disadvantages</h4>
+            <p>
+                It’s only fair that I give equal time to listing the disadvantages (or potential disadvantages) of VBA:
+            </p>
+
+            <!-- Lists of disadvantages -->
+            <ol>
+                <li>You have to know how to write programs in VBA (but that’s why you are here, right?). Fortunately, it’s not as difficult as you might expect.</li>
+                <li>
+                    Sometimes, things go wrong. In other words, you can’t blindly assume that your VBA program will always work correctly under all circumstances. 
+                    Welcome to world of debugging and, if others are using your macros, be prepared for technical support.
+                </li>
+            </ol>
+
+            <!-- Dividing line -->
+            <div class="w3-container">
+                <hr>
+            </div>
+
+            <!-- VBA in nutshell -->
+            <h3>VBA in nutshell</h3>
+            <p>Just to let you know what you are in for, I’ve prepared a quick summary of what VBA is all about.</p>
+
+            <ul>
+                <li>
+                    You perform actions in VBA by writing (or recording) code in a VBA module. 
+                    You view and edit VBA modules by using the Visual Basic Editor (VBE).
+                </li>
+                <li>
+                    <strong>A VBA module consists of Sub procedures.</strong> A sub procedure is a chunk of computer code that 
+                    performs some action on or with objects. The following example shows a simple Sub procedure 
+                    called AddThem. This amazing program displays the result of 1 plus 1.
+                </li>
+            </ul>
+
+            <!-- This is code example -->            
+            <div class="w3-panel w3-card w3-light-grey">
+                <h3>Example</h3>
+                <div class="w3-code notranslate">
+                    Sub AddThem()<br>
+                    &nbsp; &nbsp; Sum = 1 + 1<br>
+                    &nbsp; &nbsp; MsgBox ("The answer is " &#38; Sum)<br>
+                    End Sub
+                </div>
+            </div>
+
+            <!-- This is bottom page navigation bar -->
+            <div class="w3-bar w3-border w3-margin-top w3-margin-bottom w3-round">
+                <a href="../Home.html" class="w3-button">&#10094; Home</a>
+                <a href="visual_basic_editor.html" class="w3-button w3-right">Next &#10095;</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer notification of copyright -->
+    <div class="w3-container w3-teal">
+        <div class="w3-mobile w3-center">
+            <h4>Copyright by CADwCODE</h4>
+        </div> 
+    </div>
+</body>
+</html>

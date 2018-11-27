@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8" />
+    <meta name="Keywords" content="visual basic for application tutorials, 
+    solidworks macro tutorials,SW macro tutorials, vba tutorial, cad macro tutorial, 
+    solidworks add-in tutorials" />
+    <meta name="Description" content="Well organized and easy to understand Macro/add-in 
+    tutorials for any Computer Aided Design (CAD) software, with examples show how to use 
+    Visual Basic for Application (VBA) and Macro development, how to create add-in using 
+    C# programming language." />
+    <title>Executing Function procedure</title>
+    <link rel="stylesheet" href="../w3.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+    <link rel="icon" href="../images/logo-black.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- 
+        Scripts
+        1. This is script for showing menu bar in mobile.
+        2. This is a toggle button.
+        3. This is a script for opening and closing side bar
+    -->
+    <script>
+        // This is script 1 and 2
+        function openMenu(){
+            var x = document.getElementById("top_menu");
+            if (x.className.indexOf("w3-hide-small") == -1) {
+                x.className += "w3-hide-small";
+            } else {
+                x.className = x.className.replace("w3-hide-small", "");
+            }
+        }
+
+        // This is script 3
+        // Function for opeingin of side bar
+        function open_vba_sidebar(){
+            document.getElementById("vba_contentlist").style.width = "300px";
+        }
+        // Function for closing of side bar
+        function close_vba_sidebar(){
+            document.getElementById("vba_contentlist").style.width = "0";
+        }
+    </script>
+</head>
+<body>
+    <!-- This is our Heading -->
+    <div class="w3-container w3-cell-row w3-teal w3-mobile ">
+        <!-- This is Site name for large screen -->
+        <div class="w3-cell w3-mobile w3-hide-small"><h1>CADwCODE</h1></div>
+        <!-- This is Site name for small screen-->
+        <div class="w3-cell w3-mobile w3-hide-large w3-center"><h1>CADwCODE</h1></div>
+        <!-- This is Site description -->
+        <div class="w3-hide-small w3-cell w3-right w3-wide w3-mobile">LEARN CAD WITH CODE</div>
+    </div>
+
+    <!-- Menu list -->
+    <div class="sticky">
+        <!-- This is menu list -->
+        <div class="w3-bar w3-large w3-dark-grey" style="font-family: 'Ubuntu', sans-serif">
+            <!-- This is menu icon comes in mobile -->
+            <i onclick="openMenu()" 
+                class=" w3-button w3-bar-item w3-right w3-hide-large w3-hover-black material-icons">home</i>
+            <!-- This is our container for menu list -->
+            <div id="top_menu" class="w3-hide-small">
+                <a href="../index.html" class="w3-bar-item w3-button w3-hover-black w3-mobile">Home</a>
+                <a href="vba_tutorial_main_page.html" class="w3-bar-item w3-button w3-rose w3-hover-black w3-mobile">VBA</a>
+                <a href="../solidworks_tutorials/solidworks_tutorial_main_page.html" class="w3-bar-item w3-button w3-hover-black w3-mobile">Solidworks</a>
+                <a href="../about_website.html" class="w3-bar-item w3-button w3-hover-black w3-mobile">About</a>
+                <a href="../about_privacy.html" class="w3-bar-item w3-button w3-hover-black w3-mobile">Privacy Policy</a>
+                <a href="../disclaimer.html" class="w3-bar-item w3-button w3-hover-black w3-mobile">Disclaimer</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Side bar for Visual Basic -->
+    <div class="sidenav w3-bar-block" style="font-family: 'Ubuntu', sans-serif" id="vba_contentlist">
+        <i onclick="close_vba_sidebar()" class=" w3-button w3-bar-item w3-right w3-hover-black material-icons">close</i>
+        <a href="vba_tutorial_main_page.html" class="w3-bar-item w3-button w3-block w3-mobile">Visual Basic Introduction</a>
+        <a href="visual_basic_editor.html" class="w3-bar-item w3-button w3-block w3-mobile">VISUAL BASIC EDITOR (VBE)</a>
+        <a href="working_with_project_window.html" class="w3-bar-item w3-button w3-block w3-mobile">Working with Project Window</a>
+        <a href="working_with_code_window.html" class="w3-bar-item w3-button w3-block w3-mobile">Working with Code Window</a>
+        <a href="customizing_vbe.html" class="w3-bar-item w3-button w3-block w3-mobile">Customizing Visual Basic Editor</a>
+        <a href="sub_and_function_procedure.html" class="w3-bar-item w3-button w3-block w3-mobile">Sub and Function Procedures</a>
+        <a href="sub_versus_function_procedure.html" class="w3-bar-item w3-button w3-block w3-mobile">Sub versus Function Procedures</a>
+        <a href="executing_sub_procedure.html" class="w3-bar-item w3-button w3-block w3-mobile">Executing Sub procedure</a>
+        <a href="executing_function_procedure.html" class="w3-bar-item w3-button w3-block w3-rose w3-mobile">Executing Function procedure</a>
+        <a href="programming_concepts.html" class="w3-bar-item w3-button w3-block w3-mobile">Programming Concepts</a>
+        <a href="comments_in_vba.html" class="w3-bar-item w3-button w3-block w3-mobile">Using Comments in Your VBA Code</a>
+        <a href="understanding_data_types.html" class="w3-bar-item w3-button w3-block w3-mobile">Understanding Data types</a>
+        <a href="understanding_variables.html" class="w3-bar-item w3-button w3-block w3-mobile">Understanding Variables</a>
+        <a href="declaring_and_scope_of_variables.html" class="w3-bar-item w3-button w3-block w3-mobile">Declaring and Scoping Variables</a>
+        <a href="procedure_only_variables.html" class="w3-bar-item w3-button w3-block w3-mobile">Procedure-only Variables</a>
+        <a href="module_only_variables.html" class="w3-bar-item w3-button w3-block w3-mobile">Module-only Variables</a>
+        <a href="public_static_and_life_of_variables.html" class="w3-bar-item w3-button w3-block w3-mobile">Public, Static and Life of Variables</a>
+        <a href="understanding_constants.html" class="w3-bar-item w3-button w3-block w3-mobile">Understanding Constants</a>
+        <a href="working_with_strings.html" class="w3-bar-item w3-button w3-block w3-mobile">Working with Strings</a>
+        <a href="assignment_statement.html" class="w3-bar-item w3-button w3-block w3-mobile">Assignment Statements</a>
+        <a href="operators.html" class="w3-bar-item w3-button w3-block w3-mobile">Operators</a>
+        <a href="working_with_arrays.html" class="w3-bar-item w3-button w3-block w3-mobile">Working with Arrays</a>
+    </div>
+
+    <!-- This is my webpage --> 
+    <div class="w3-container w3-cell-row">
+        
+        <!-- This is left side space -->
+        <div class="w3-container w3-cell w3-hide-small"></div>
+
+        <!-- This is where i put my content --> 
+        <div class="w3-container w3-cell">        
+            
+            <!-- This introduction to Visual Basic macro -->
+            <div class="w3-container">
+
+                <!-- This is button for showing Content list-->
+                <div class="w3-margin-top w3-bar-block w3-mobile">
+                    <button class="w3-button w3-margin-bottom w3-round-large w3-bar-item w3-left w3-hover-black" onclick="open_vba_sidebar()">
+                        <i class="material-icons">library_books</i> Visual Basic Content List
+                    </button>
+                </div>
+
+                <!-- This is top navigation bar -->
+                <div class="w3-bar">
+                    <a href="executing_sub_procedure.html" class="w3-button w3-rose">&#10094; Previous</a>
+                    <a href="programming_concepts.html" class="w3-button w3-rose w3-right">Next &#10095;</a>
+                </div>
+
+                <!-- Article Heading -->
+                <h2>Executing Function procedure</h2>
+
+                <!-- Article -->
+                <p>
+                    Function procedures, unlike Sub procedures, can be only executed in only one way:
+                </p>
+                <ul>
+                    <li>By calling the function from another <em>Sub procedure</em> or <em>Function procedure</em>.</li>
+                </ul>
+                <p>Try this simple function. Enter it into a VBA module:</p>
+                <!-- This is code example -->            
+                <div class="w3-panel w3-card w3-light-grey">
+                    <h3>Example</h3>
+                    <div class="w3-code notranslate">
+                        Function CubeRoot()<br>
+                        &nbsp; &nbsp;CubeRoot = number ^ (1/3)<br>
+                        End Function
+                    </div>
+                </div>
+                <!-- paragraph continues -->
+                <p>
+                    This function is pretty wimpy — it merely calculates the cube root of the number passed to it as its argument. 
+                    It does, provide a starting point for understanding functions. It also illustrates an important concept about functions: 
+                    <em>how to return the value. (You do remember that a function returns a value, right?)</em>
+                </p>
+                <p>
+                    Notice that the single line of code that makes up this Function procedure performs a calculation. 
+                    The result of the math (number to the power of 1⁄3) is assigned to the variable CubeRoot. 
+                    Not coincidentally, <strong>CubeRoot</strong> is also the name of the function. To tell the function what value to return, 
+                    you assign that value to the name of the function.
+                </p>
+
+                <!-- Dividing line -->
+                <div class="w3-container">
+                    <hr>
+                </div>
+
+                <!-- Executing the Function procedure from a Sub procedure -->
+                <h3>Executing the Function procedure from a Sub procedure</h3>
+                <p>
+                    Because you can’t execute a function directly, you must call it from another procedure. 
+                    Enter the following simple procedure in the same VBA module that contains the <strong>CubeRoot</strong> function:
+                </p>
+                <!-- This is code example -->            
+                <div class="w3-panel w3-card w3-light-grey">
+                    <h3>Example</h3>
+                    <div class="w3-code notranslate">
+                        Sub CubeRoot()<br>
+                        &nbsp; &nbsp;Ans = CubeRoot(125)<br>
+                        &nbsp; &nbsp;MsgBox Ans<br>
+                        End Sub
+                    </div>
+                </div>
+                <!-- Paragraph continues -->
+                <p>
+                    When you execute the <strong>CubeRoot</strong> procedure (using any of the methods described earlier), 
+                    Youe CAD software displays a message box that contains the value of the Ans variable, which is <strong>5</strong>.
+                </p>
+                <p>Here’s what’s going on:</p>
+                <ol>
+                    <li><strong>CubeRoot(125)</strong> means it CubeRoot receive argument of <strong>125</strong>.</li>
+                    <li>
+                        Then Function <strong>CubeRoot(number)</strong> is executed. As described previously, number is an argument. 
+                        And here the value of this is <strong>125</strong>.
+                    </li>
+                    <li>
+                        Then by <strong>“number ^ (1/3)”</strong> we get the cube of <strong>125</strong>. (why? Because <strong>125</strong> 
+                        is argument passed by the sub function and this <strong>125</strong> is the value of <strong>"number"</strong>.)
+                    </li>
+                    <li>
+                        After that cube value of <strong>125</strong>, i.e. <strong>5</strong>, is assigned to or given to or equal to CubeRoot. 
+                        This CubeRoot assigned to or given to or equal to Ans. After that message boxes show the value of 5 in your screen.
+                    </li>
+                </ol>
+                <!-- Note for Re-read in not understand -->
+                <div class="w3-panel w3-pale-red w3-leftbar w3-border-red">
+                    <p>
+                        Please read again if you don’t understand what is going on here.
+                    </p>
+                </div>
+
+                <!-- This is bottom page navigation bar -->
+                <div class="w3-bar w3-margin-top w3-margin-bottom">
+                    <a href="executing_sub_procedure.html" class="w3-button w3-rose">&#10094; Previous</a>
+                    <a href="programming_concepts.html" class="w3-button w3-rose w3-right">Next &#10095;</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- This is right side space -->
+        <div class="w3-container w3-cell w3-hide-small"></div>
+
+    </div>
+
+    <!-- Footer notification of copyright -->
+    <div class="w3-container w3-teal">
+        <div class="w3-mobile w3-center">
+            <h4>Copyright by CADwCODE</h4>
+        </div> 
+    </div>
+</body>
+</html>

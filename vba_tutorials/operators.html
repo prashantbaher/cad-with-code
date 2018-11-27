@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8" />
+    <meta name="Keywords" content="visual basic for application tutorials, 
+    solidworks macro tutorials,SW macro tutorials, vba tutorial, cad macro tutorial, 
+    solidworks add-in tutorials" />
+    <meta name="Description" content="Well organized and easy to understand Macro/add-in 
+    tutorials for any Computer Aided Design (CAD) software, with examples show how to use 
+    Visual Basic for Application (VBA) and Macro development, how to create add-in using 
+    C# programming language." />
+    <title>Operators</title>
+    <link rel="stylesheet" href="../w3.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+    <link rel="icon" href="../images/logo-black.png">   
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- 
+        Scripts
+        1. This is script for showing menu bar in mobile.
+        2. This is a toggle button.
+        3. This is a script for opening and closing side bar
+    -->
+    <script>
+        // This is script 1 and 2
+        function openMenu(){
+            var x = document.getElementById("top_menu");
+            if (x.className.indexOf("w3-hide-small") == -1) {
+                x.className += "w3-hide-small";
+            } else {
+                x.className = x.className.replace("w3-hide-small", "");
+            }
+        }
+
+        // This is script 3
+        // Function for opeingin of side bar
+        function open_vba_sidebar(){
+            document.getElementById("vba_contentlist").style.width = "300px";
+        }
+        // Function for closing of side bar
+        function close_vba_sidebar(){
+            document.getElementById("vba_contentlist").style.width = "0";
+        }
+    </script>
+</head>
+<body>
+    <!-- This is our Heading -->
+    <div class="w3-container w3-cell-row w3-teal w3-mobile ">
+        <!-- This is Site name for large screen -->
+        <div class="w3-cell w3-mobile w3-hide-small"><h1>CADwCODE</h1></div>
+        <!-- This is Site name for small screen-->
+        <div class="w3-cell w3-mobile w3-hide-large w3-center"><h1>CADwCODE</h1></div>
+        <!-- This is Site description -->
+        <div class="w3-hide-small w3-cell w3-right w3-wide w3-mobile">LEARN CAD WITH CODE</div>            
+    </div>
+
+    <!-- Menu list -->
+    <div class="sticky">
+        <!-- This is menu list -->
+        <div class="w3-bar w3-large w3-dark-grey" style="font-family: 'Ubuntu', sans-serif">
+            <!-- This is menu icon comes in mobile -->
+            <i onclick="openMenu()" 
+                class=" w3-button w3-bar-item w3-right w3-hide-large w3-hover-black material-icons">home</i>
+            <!-- This is our container for menu list -->
+            <div id="top_menu" class="w3-hide-small">
+                <a href="../index.html" class="w3-bar-item w3-button w3-hover-black w3-mobile">Home</a>
+                <a href="vba_tutorial_main_page.html" class="w3-bar-item w3-button w3-rose w3-hover-black w3-mobile">VBA</a>
+                <a href="../solidworks_tutorials/solidworks_tutorial_main_page.html" class="w3-bar-item w3-button w3-hover-black w3-mobile">Solidworks</a>
+                <a href="../about_website.html" class="w3-bar-item w3-button w3-hover-black w3-mobile">About</a>
+                <a href="../about_privacy.html" class="w3-bar-item w3-button w3-hover-black w3-mobile">Privacy Policy</a>
+                <a href="../disclaimer.html" class="w3-bar-item w3-button w3-hover-black w3-mobile">Disclaimer</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Side bar for Visual Basic -->
+    <div class="sidenav w3-bar-block" style="font-family: 'Ubuntu', sans-serif; z-index:2" id="vba_contentlist">
+        <i onclick="close_vba_sidebar()" class=" w3-button w3-bar-item w3-right w3-hover-black material-icons">close</i>
+        <a href="vba_tutorial_main_page.html" class="w3-bar-item w3-button w3-block w3-mobile">Visual Basic Introduction</a>
+        <a href="visual_basic_editor.html" class="w3-bar-item w3-button w3-block w3-mobile">VISUAL BASIC EDITOR (VBE)</a>
+        <a href="working_with_project_window.html" class="w3-bar-item w3-button w3-block w3-mobile">Working with Project Window</a>
+        <a href="working_with_code_window.html" class="w3-bar-item w3-button w3-block w3-mobile">Working with Code Window</a>
+        <a href="customizing_vbe.html" class="w3-bar-item w3-button w3-block w3-mobile">Customizing Visual Basic Editor</a>
+        <a href="sub_and_function_procedure.html" class="w3-bar-item w3-button w3-block w3-mobile">Sub and Function Procedures</a>
+        <a href="sub_versus_function_procedure.html" class="w3-bar-item w3-button w3-block w3-mobile">Sub versus Function Procedures</a>
+        <a href="executing_sub_procedure.html" class="w3-bar-item w3-button w3-block w3-mobile">Executing Sub procedure</a>
+        <a href="executing_function_procedure.html" class="w3-bar-item w3-button w3-block w3-mobile">Executing Function procedure</a>
+        <a href="programming_concepts.html" class="w3-bar-item w3-button w3-block w3-mobile">Programming Concepts</a>
+        <a href="comments_in_vba.html" class="w3-bar-item w3-button w3-block w3-mobile">Using Comments in Your VBA Code</a>
+        <a href="understanding_data_types.html" class="w3-bar-item w3-button w3-block w3-mobile">Understanding Data types</a>
+        <a href="understanding_variables.html" class="w3-bar-item w3-button w3-block w3-mobile">Understanding Variables</a>
+        <a href="declaring_and_scope_of_variables.html" class="w3-bar-item w3-button w3-block w3-mobile">Declaring and Scoping Variables</a>
+        <a href="procedure_only_variables.html" class="w3-bar-item w3-button w3-block w3-mobile">Procedure-only Variables</a>
+        <a href="module_only_variables.html" class="w3-bar-item w3-button w3-block w3-mobile">Module-only Variables</a>
+        <a href="public_static_and_life_of_variables.html" class="w3-bar-item w3-button w3-block  w3-mobile">Public, Static and Life of Variables</a>
+        <a href="understanding_constants.html" class="w3-bar-item w3-button w3-block  w3-mobile">Understanding Constants</a>
+        <a href="working_with_strings.html" class="w3-bar-item w3-button w3-block w3-mobile">Working with Strings</a>
+        <a href="assignment_statement.html" class="w3-bar-item w3-button w3-block w3-mobile">Assignment Statements</a>
+        <a href="operators.html" class="w3-bar-item w3-button w3-block w3-red w3-mobile">Operators</a>
+        <a href="working_with_arrays.html" class="w3-bar-item w3-button w3-block w3-mobile">Working with Arrays</a>
+    </div>
+
+    <!-- This is my webpage --> 
+    <div class="w3-container w3-cell-row">
+                
+        <!-- This is left side space -->
+        <div class="w3-container w3-cell w3-hide-small"></div>
+
+        <!-- This is where i put my content --> 
+        <div class="w3-container w3-cell">     
+            
+            <!-- This introduction to Visual Basic macro -->
+            <div class="w3-container">
+
+                <!-- This is button for showing Content list-->
+                <div class="w3-margin-top w3-bar-block w3-mobile">
+                    <button class="w3-button w3-margin-bottom w3-round-large w3-bar-item w3-left w3-hover-black" onclick="open_vba_sidebar()">
+                        <i class="material-icons">library_books</i> Visual Basic Content List
+                    </button>
+                </div>
+
+                <!-- This is top navigation bar -->
+                <div class="w3-bar">
+                    <a href="assignment_statement.html" class="w3-button w3-rose">&#10094; Previous</a>
+                    <a href="working_with_arrays.html" class="w3-button w3-rose w3-right">Next &#10095;</a>
+                </div>
+
+                <!-- Article Heading -->
+                <h2>Operators</h2>
+
+                <!-- Article -->
+                <p>
+                    As you can see in the preceding <a href="assignment_statement.html" class="w3-hover-text-red">Example</a> 
+                    VBA uses the equal sign as its <strong>assignment operator</strong>. You’re probably 
+                    accustomed to using an equal sign as a mathematical symbol for equality. Therefore, 
+                    an assignment statement like the following may cause you to raise your eyebrows:
+                </p>
+
+                <!-- This is example declares assignment operator -->            
+                <div class="w3-panel w3-card w3-light-grey">
+                    <h3>Example</h3>
+                    <div class="w3-code notranslate">
+                        &nbsp;&nbsp;x = x + 1<br>
+                    </div>
+                </div>
+
+                <!-- paragraph continues -->
+                <p>
+                    How can the variable x be equal to itself plus 1? Answer: It can’t. In this case, 
+                    the assignment statement is increasing the value of x by 1. Just remember that an <em>assignment 
+                    uses the equal sign as an operator, not a symbol of equality.</em>
+                </p>
+
+                <!-- Dividing line -->
+                <div class="w3-container">
+                    <hr>
+                </div>
+
+                <!-- Smooth Operators -->
+                <h3>Smooth Operators</h3>
+                <p>
+                    Operators play a major role in VBA. Besides the assignment operator i.e. equal sign 
+                    <em>(discussed in the previous topic)</em>, VBA provides several other operators. 
+                    Below table lists these operators.
+                </p>    
+                
+                <!-- Table for VBA’s Operators -->
+                <table class="w3-table-all w3-mobile w3-card-4">
+                    <!-- This is caption for table, for this i have not used standard caption instead used table heading -->
+                    <tr>
+                        <th class="w3-center"colspan="2">VBA’s Operators</th>
+                    </tr>
+                    <tr>
+                        <th>Function</th>
+                        <th>Operator Symbol</th>
+                    </tr>
+                    <tr>
+                        <td>Addition</td>
+                        <td>+</td>
+                    </tr>
+                    <tr>
+                        <td>Multiplication</td>
+                        <td>*</td>
+                    </tr>
+                    <tr>
+                        <td>Division</td>
+                        <td>/</td>
+                    </tr>
+                    <tr>
+                        <td>Subtraction</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>Exponentiation</td>
+                        <td>^</td>
+                    </tr>
+                    <tr>
+                        <td>String concatenation</td>
+                        <td>&#38;</td>
+                    </tr>
+                    <tr>
+                        <td>Integer division (the result is always an integer)</td>
+                        <td>\</td>
+                    </tr>
+                    <tr>
+                        <td>Modulo arithmetic (returns the remainder of a division operation)</td>
+                        <td>Mod</td>
+                    </tr>
+                </table>
+
+                <!-- paragraph continues -->
+                <p>
+                    The term <strong>concatenation</strong> is programmer speak for <em>“join together”</em>. 
+                    Thus, if you concatenate strings, you are combining strings to make a new and improved string.
+                </p>
+                <p>
+                    VBA also provides a full set of logical operators. Below table, shows some of logical operators.
+                </p>
+
+                <!-- Table for VBA’s Logical Operators -->
+                <table class="w3-table-all w3-mobile w3-card-4">
+                    <!-- This is caption for table, for this i have not used standard caption instead used table heading -->
+                    <tr>
+                        <th class="w3-center"colspan="2">VBA’s Logical Operators</th>
+                    </tr>
+                    <tr>
+                        <th>Operator</th>
+                        <th>What is does</th>
+                    </tr>
+                    <tr>
+                        <td>Not</td>
+                        <td>Performs a logical negation on an expression.</td>
+                    </tr>
+                    <tr>
+                        <td>And</td>
+                        <td>Performs a logical conjunction on two expressions.</td>
+                    </tr>
+                    <tr>
+                        <td>Or</td>
+                        <td>Performs a logical disjunction on two expressions.</td>
+                    </tr>
+                    <tr>
+                        <td>XoR</td>
+                        <td>Performs a logical exclusion on two expressions.</td>
+                    </tr>
+                    <tr>
+                        <td>Eqv</td>
+                        <td>Performs a logical equivalence on two expressions.</td>
+                    </tr>
+                    <tr>
+                        <td>Imp</td>
+                        <td>Performs a logical implication on two expressions.</td>
+                    </tr>
+                </table> 
+                
+                <!-- paragraph continues -->
+                <p>
+                    The precedence order for operators in VBA is exactly the same as in Excel formulas. 
+                    <em>Exponentiation</em> has the highest precedence. <em>multiplication</em> and <em>division</em> 
+                    come next, followed by <em>addition</em> and <em>subtraction</em>. You can use parentheses 
+                    to change the natural precedence order, making whatever’s operation in 
+                    parentheses come before any operator. Take a look at this code:
+                </p>
+
+                <!-- This is example show precedence order for operators -->            
+                <div class="w3-panel w3-card w3-light-grey">
+                    <h3>Example</h3>
+                    <div class="w3-code notranslate">
+                        &nbsp;&nbsp;z = x + 5 * y<br>
+                    </div>
+                </div>
+
+                <!-- paragraph continues -->
+                <p>
+                    When this code is executed, what’s the value of z? If you answered 13, 
+                    you get a gold star that proves you understand the concept of operator precedence. 
+                    If you answered 16, read this: The multiplication operation (5 * y) is performed first, 
+                    and that result is added to x. If you answered something other than 13 or 16, I have no comment.
+                </p>
+                <p>
+                    By the way, I can never remember how operator precedence works, so I tend to use 
+                    parentheses even when they aren’t required. For example, in real life I would write 
+                    that last assignment statement like this:
+                </p>
+
+                <!-- This is example show precedence order for operators using parentheses -->            
+                <div class="w3-panel w3-card w3-light-grey">
+                    <h3>Example</h3>
+                    <div class="w3-code notranslate">
+                        &nbsp;&nbsp;Z = x + (5 * y)<br>
+                    </div>
+                </div>
+
+                <!-- Note for using parentheses -->
+                <div class="w3-panel w3-pale-green w3-leftbar w3-border-green">
+                    <p>
+                        Don’t be shy about using parentheses even if they aren’t required — 
+                        especially if doing so makes your code easier to understand. 
+                        VBA doesn’t care if you use extra parentheses.
+                    </p>
+                </div>
+                
+                <!-- This is bottom page navigation bar -->
+                <div class="w3-bar w3-margin-top w3-margin-bottom">
+                    <a href="assignment_statement.html" class="w3-button w3-rose">&#10094; Previous</a>
+                    <a href="working_with_arrays.html" class="w3-button w3-rose w3-right">Next &#10095;</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- This is right side space -->
+        <div class="w3-container w3-cell w3-hide-small"></div>
+
+    </div>
+
+    <!-- Footer notification of copyright -->
+    <div class="w3-container w3-teal">
+        <div class="w3-mobile w3-center">
+            <h4>Copyright by CADwCODE</h4>
+        </div> 
+    </div>
+</body>
+</html>
